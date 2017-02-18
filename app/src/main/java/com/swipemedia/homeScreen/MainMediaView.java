@@ -39,6 +39,7 @@ public class MainMediaView extends FrameLayout {
         inputUrl = url;
     }
 
+    //VIEWPAGER instantiateItem INIT MEDIAPLAYER
     public void initMedia() {
         mMediaPlayer = new MediaPlayer();
         try {
@@ -51,6 +52,7 @@ public class MainMediaView extends FrameLayout {
                                                @Override
                                                public void onPrepared(MediaPlayer mp) {
                                                    mMediaPlayer.setDisplay(holder);
+                                                   //FIRST START
                                                    if (firststart) {
                                                        mMediaPlayer.start();
                                                        firststart=false;

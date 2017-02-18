@@ -14,6 +14,7 @@ import com.swipemedia.R;
 import java.util.ArrayList;
 import java.util.List;
 
+//USE MAX_INT FOT RECYCLEVIDEOPLAY
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         }
         mViewPager.setCurrentItem(MaxCount * 100);
         CurrentPage = MaxCount * 100;
+        //FIRST VIDEO PLAY
         mediaViewList.get(0).setFirstStart();
         mViewPager.
                 setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -65,8 +67,10 @@ public class MainActivity extends AppCompatActivity {
                         SwipePage = arg0;
                         Log.e("scroll", "page num=" + SwipePage);
                         if (CurrentPage == SwipePage) {
+                            //SCROLL BACK RESUME
                             mediaViewList.get(CurrentPage % MaxCount).start();
                         } else {
+                            //SCROLL ANOTHER PAUSE ORI,START NEW
                             mediaViewList.get(CurrentPage % MaxCount).pause();
                             mediaViewList.get(SwipePage % MaxCount).start();
                             CurrentPage = SwipePage;
@@ -87,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                             mediaViewList.get(CurrentPage % MaxCount).pause();
                             Log.e("scrolled", "page num=" + CurrentPage);
                         } else if (arg0 == 2) {
+                            //SCROLL BACK RESUME
                             if (CurrentPage == SwipePage) {
                                 mediaViewList.get(CurrentPage % MaxCount).start();
                             }
