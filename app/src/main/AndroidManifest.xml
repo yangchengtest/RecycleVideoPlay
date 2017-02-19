@@ -14,12 +14,15 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".homeScreen.MainActivity">
+        <activity android:name=".homeScreen.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
