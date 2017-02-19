@@ -10,6 +10,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        sourceSets.main{
+            jni.srcDirs=[]
+            jniLibs.srcDir "src/main/libs"
+        }
     }
     buildTypes {
         release {
