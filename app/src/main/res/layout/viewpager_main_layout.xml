@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray">
-
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
         <SurfaceView
+            android:id="@+id/main_surface"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/main_surface"/>
+            android:layout_gravity="center"
+            />
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,8 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="click"
-            />
+            android:text="click" />
     </LinearLayout>
 
 </FrameLayout>
